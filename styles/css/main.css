@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/**Imports*/
 /*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -8566,8 +8567,22 @@ h3 {
     border-color: #dee2e6;
   }
 }
+/**Variables*/
+/**Mixins*/
+@font-face {
+  font-family: "Rust";
+  src: url("../css/fonts/rust/introrustg-base2line-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../css/fonts/rust/introrustg-base2line-webfont.eot?#iefix") format("embedded-opentype"), url("../css/fonts/rust/introrustg-base2line-webfont.woff2") format("woff2"), url("../css/fonts/rust/introrustg-base2line-webfont.woff") format("woff"), url("../css/fonts/rust/introrustg-base2line-webfont.ttf") format("truetype"), url("../css/fonts/rust/introrustg-base2line-webfont.svg#svgFontName") format("svg");
+  /* Legacy iOS */
+}
 .navigation {
   background: red;
+  display: flex;
+}
+
+.titleText {
+  font-family: "Rust";
 }
 
 /*# sourceMappingURL=main.css.map */
