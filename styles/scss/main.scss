@@ -4,6 +4,10 @@
 
 /**Variables*/
 
+  $orangeColor: #FCB964;
+  $whiteColor: #FFFDFF;
+  $grayColor: #020202;
+  $inactiveColor: #B2B2B2;
   $fontpath: "../css/fonts/rust/";
 
 /**Mixins*/
@@ -21,11 +25,340 @@
 };
 
 @include font-face("Rust","introrustg-base2line-webfont");
-
-.navigation{
-  background: red;
-  display: flex;
+body{
+  overflow-x: hidden;
 }
-.titleText{
+.navigation{
+  background: transparent;
+  display: flex;
+  position: absolute;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.logo{
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  &:before{
+    content: "";
+    width: 40px;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+  }
+  &:after{
+    content: "";
+    width: 100vw;
+    height: 1px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    right: -11px;
+    transform: rotateY(180deg);
+    transform-origin: right;
+  }
+}
+.logo__image{
+  max-width: 180px;
+}
+.menu {
+    margin-right: 50px;
+}
+.menu__list {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+}
+.menu__item {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    position: relative;
+    &:hover{
+      .menu__line{
+        width: 75%;
+        transition: 0.5s;
+      }
+      .menu__link{
+        transition: 0.5s;
+        color: $orangeColor;
+        text-decoration: none;
+      }
+    }
+}
+.menu__link {
+    color: white;
+    font-size: 0.7em;
+    font-weight: bolder;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.menu__line {
+    width: 0%;
+    height: 3px;
+    background: $orangeColor;
+    position: absolute;
+    bottom: -1.5px;
+    transition: 0.5s;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: center;
+}
+.menu__dot {
+    width: 4px;
+    height: 4px;
+    background: white;
+    position: absolute;
+    right: -2px;
+    border-radius: 40px;
+}
+.phone {
+    margin-right: 40px;
+}
+.phone__number {
+    margin: 0;
+    color: $whiteColor;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/**HOME SECTION*/
+.home{
+  background-image: url("../../img/top_banner-min.png");
+  background-size: cover;
+  min-height: 100vh;
+  padding: 200px 20% 0px 20%;
+  background-attachment: fixed;
+}
+.icon__container {
+    font-size: 1em;
+}
+.icon_container--center{
+  text-align: center;
+}
+.icon__item{
+    margin: 0px 5px;
+}
+.icon__item--small{
+  font-size: 0.7em;
+}
+.icon__item--medium{
+  font-size: 0.9em;
+}
+.icon__item--big{
+  font-size: 1.1em;
+}
+.icon__item--orange {
+  color: $orangeColor;
+}
+.icon__item--white {
+  color: $whiteColor;
+}
+.triangleText {
+    text-align: center;
+    margin: 20px 0px;
+}
+.triangleText__text {
+    color: $whiteColor;
+    &::before{
+      content: "";
+      display: inline-block;
+      margin-right: 40px;
+      vertical-align: middle;
+      margin-bottom: 1px;
+      width: 0;
+      height: 0;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-right: 80px solid #fcb964;
+    }
+    &::after{
+      content: "";
+      display: inline-block;
+      margin-left: 40px;
+      vertical-align: middle;
+      margin-bottom: 1px;
+      width: 0;
+      height: 0;
+      border-top: 3px solid transparent;
+      border-bottom: 3px solid transparent;
+      border-left: 80px solid #fcb964;
+    }
+}
+.triangleText__text--cilcle{
+  font-size: 1.5em;
+}
+.titleText {
+    text-align: center;
+}
+.titleText--rust{
   font-family: "Rust";
+}
+.titleText--big{
+  font-size: 1.8em;
+}
+.titleText--medium{
+  font-size: 1.5em;
+}
+.titleText--white{
+  color: $whiteColor;
+}
+.titleText--gray{
+  color: $grayColor;
+}
+.firstText {
+    text-align: center;
+    color: white;
+    margin: 10px 0px;
+}
+.firstText--small{
+  font-size: 0.5em;
+}
+.firstText--gray{
+  color: $grayColor;
+}
+.divider__circle {
+    width: 6px;
+    height: 6px;
+    background: $orangeColor;
+    border-radius: 40px;
+    margin: auto;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      right: 0px;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+      margin-bottom: 1px;
+      width: 0;
+      height: 0;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-right: 70px solid $orangeColor;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0px;
+      margin-left: 10px;
+      vertical-align: middle;
+      margin-bottom: 1px;
+      width: 0;
+      height: 0;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+      border-left: 70px solid $orangeColor;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+}
+.buttonDown {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.buttonDown__circle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border: 1px solid $whiteColor;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+.buttonDown__circle__arrow {
+    color: $orangeColor;
+}
+
+/**PROGRAMS*/
+.programs {
+    padding: 20px 20% 0px 20%;
+}
+.texture {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    bottom: 0px;
+}
+.texture--one{
+  width: 100%;
+}
+.coffee{
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+}
+.first_bean{
+  width: 135px;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-center .icon__item{
+  padding: 0px 10px;
+}
+.tabs {
+  ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      border-bottom: 1px solid $inactiveColor;
+      margin: 0px;
+      li {
+          margin: 0px 10px;
+          padding: 10px 0px 10px 0px;
+          a{
+            &:hover{
+              text-decoration: none;
+              color: $grayColor;
+            }
+          }
+      }
+  }
+  .tab--inactive{
+    a{
+      color: $inactiveColor;
+    }
+  }
+  .tab--active{
+    a{
+      color: $grayColor;
+    }
+  }
+}
+.planContent__2col{
+  display: flex;
+  margin-top: 40px;
+  position: relative;
+  .floatingTitle {
+    position: absolute;
+    right: 0;
+    font-size: 7em;
+    font-weight: bold;
+    color: lightgray;
+    z-index: -1;
+    top: -45px;
+    line-height: 1;
+  }
+  .planContent__2col__left{
+    width: 55%;
+      img{
+        width: 100%;
+      }
+  }
+  .planContent__2col__right{
+    width: 45%;
+  }
 }
