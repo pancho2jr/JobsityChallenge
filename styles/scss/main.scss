@@ -8,23 +8,28 @@
   $whiteColor: #FFFDFF;
   $grayColor: #020202;
   $inactiveColor: #B2B2B2;
-  $fontpath: "../css/fonts/rust/";
+  $fontpath: "../css/fonts/";
 
 /**Mixins*/
 
-@mixin font-face($style_name,$file) {
+@mixin font-face($style_name,$folder,$file) {
   @font-face {
     font-family: $style_name;
-    src: url($fontpath + $file + '.eot'); /* IE9 Compat Modes */
-    src: url($fontpath + $file + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-         url($fontpath + $file + '.woff2') format('woff2'), /* Super Modern Browsers */
-         url($fontpath + $file + '.woff') format('woff'), /* Pretty Modern Browsers */
-         url($fontpath + $file + '.ttf')  format('truetype'), /* Safari, Android, iOS */
-         url($fontpath + $file + '.svg#svgFontName') format('svg'); /* Legacy iOS */
+    src: url($fontpath + $folder + $file + '.eot'); /* IE9 Compat Modes */
+    src: url($fontpath + $folder + $file + '.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         /*url($fontpath + $folder + $file + '.woff2') format('woff2'), *//* Super Modern Browsers */
+         url($fontpath + $folder + $file + '.woff') format('woff'), /* Pretty Modern Browsers */
+         url($fontpath + $folder + $file + '.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url($fontpath + $folder + $file + '.svg#svgFontName') format('svg'); /* Legacy iOS */
   }
 };
 
-@include font-face("Rust","introrustg-base2line-webfont");
+@include font-face("Rust","rust/","introrustg-base2line-webfont");
+@include font-face("Minion","minionPro/","MinionProRegular");
+@include font-face("Monserrat","moserrat/","Montserrat-Bold");
+@include font-face("PlayfairBlack","playfair/black/","PlayfairDisplay-Black");
+@include font-face("PlayfairRegular","playfair/regular/","PlayfairDisplay-Regular");
+
 body{
   overflow-x: hidden;
 }
@@ -79,6 +84,14 @@ body{
     align-items: center;
     padding: 0px 20px;
     position: relative;
+    .menu__link {
+        color: white;
+        font-size: 0.7em;
+        font-weight: bolder;
+        text-decoration: none;
+        transition: 0.5s;
+        font-family: Intro;
+    }
     &:hover{
       .menu__line{
         width: 75%;
@@ -91,13 +104,7 @@ body{
       }
     }
 }
-.menu__link {
-    color: white;
-    font-size: 0.7em;
-    font-weight: bolder;
-    text-decoration: none;
-    transition: 0.5s;
-}
+
 .menu__line {
     width: 0%;
     height: 3px;
@@ -125,6 +132,7 @@ body{
     color: $whiteColor;
     font-weight: bold;
     font-size: 1.2em;
+    font-family: Intro;
 }
 
 /**HOME SECTION*/
@@ -165,6 +173,7 @@ body{
 }
 .triangleText__text {
     color: $whiteColor;
+    font-family: PlayfairRegular;
     &::before{
       content: "";
       display: inline-block;
@@ -214,12 +223,19 @@ body{
 .firstText {
     text-align: center;
     color: white;
+    font-family: PlayfairRegular;
     margin: 10px 0px;
 }
-.firstText--small{
+.description__text{
+  text-align: center;
+  color: white;
+  font-family: Minion;
+  margin: 10px 0px;
+}
+.firstText--small , .description__text--small{
   font-size: 0.5em;
 }
-.firstText--gray{
+.firstText--gray , .description__text--gray{
   color: $grayColor;
 }
 .divider__circle {
@@ -282,15 +298,20 @@ body{
 
 /**PROGRAMS*/
 .programs {
-    padding: 20px 20% 0px 20%;
+    padding: 20px 20% 100px 20%;
+    position: relative;
+    background-image: url("../../img/programsBackground-min.png");
 }
 .texture {
     position: absolute;
-    left: 0px;
     width: 100%;
-    bottom: 0px;
 }
 .texture--one{
+  left: 0px;
+  width: 100%;
+  bottom: 0px;
+}
+.texture__image{
   width: 100%;
 }
 .coffee{
@@ -320,6 +341,7 @@ body{
           margin: 0px 10px;
           padding: 10px 0px 10px 0px;
           a{
+            font-family: Intro;
             font-size: 0.8em;
             font-weight: bold;
             &:hover{
@@ -353,6 +375,7 @@ body{
     z-index: -1;
     top: -45px;
     line-height: 1;
+    font-family: Intro;
   }
   .planContent__2col__left{
     width: 55%;
@@ -362,5 +385,148 @@ body{
   }
   .planContent__2col__right{
     width: 45%;
+    padding: 10px 0px 0px 40px;
+    h3{
+      font-family: PlayfairBlack;
+    }
+    .certificate{
+      font-family: Minion;
+      margin-top: 40px;
+      font-size: 0.8em;
+    }
+    .minutes{
+      font-family: Minion;
+      margin-top: 10px;
+      font-size: 0.8em;
+    }
+    .plan-icon{
+      margin-right: 10px;
+      img{
+          width: 25px;
+      }
+    }
+    .price{
+      font-family: PlayfairBlack;
+      font-size: 2.6em;
+      span{
+        font-size: 0.5em;
+      }
+    }
+    .button {
+        background: black;
+        display: flex;
+        width: 200px;
+        padding: 10px;
+        justify-content: center;
+        a{
+          color: $whiteColor;
+          &:hover{
+            color: $whiteColor;
+          }
+        }
+    }
+  }
+}
+.planContent__3col{
+  display: flex;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  .planContent__3col_item{
+    flex-grow: 1;
+    min-width: 250px;
+    width: 1px;
+    p{
+      font-family: Intro;
+      font-size: 0.8em;
+    }
+  }
+}
+ /**GALLERY***/
+ .gallery{
+   padding: 200px 0px 100px 0px;
+   background:  #222121;
+   min-height: 100vh;
+   position: relative;
+   background-image: url("../../img/galleryBackground-min.png");
+   background-size: cover;
+   .texture--two{
+     top:0px;
+     width: 100%;
+     left: 0px;
+   }
+   .texture--three{
+     bottom:0px;
+     width: 100%;
+     left: 0px;
+   }
+   .gallery_slider{
+     img{
+       max-width: 90%;
+       margin: auto;
+     }
+   }
+ }
+ .menuIconRight,.menuIconLeft{
+   margin: 0px 20px;
+   display: flex;
+   align-items: center;
+ }
+ .menuIconRight img,.menuIconLeft img {
+    max-width: 20px;
+  }
+ .gallery_controls{
+   color: white;
+   display: flex;
+   margin-top: 50px;
+   margin-bottom: 50px;
+   justify-content: center;
+   align-items: center;
+ }
+ .gallery_arrow {
+    width: 50px;
+    height: 50px;
+    border: 1px solid $orangeColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery_prev span{
+  width: 15px;
+  height: 15px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  transform: rotate(-45deg);
+}
+.gallery_next span{
+  width: 15px;
+  height: 15px;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  transform: rotate(45deg);
+}
+.gallery_prev,.gallery_next {
+    position: relative;
+}
+.gallery_prev:after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    width: 45px;
+    height: 1px;
+    background: white;
+}
+.gallery_next:before {
+    content: "";
+    position: absolute;
+    right: 15px;
+    width: 45px;
+    height: 1px;
+    background: white;
+}
+.paginator{
+  margin: 0px 25px;
+  color: $orangeColor;
+  .galleryTotal,.current{
+    color: $whiteColor;
   }
 }

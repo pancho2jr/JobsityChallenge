@@ -22,27 +22,27 @@
       <div class="menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="#" >PROGRAMS</a>
+            <a class="menu__link" href="#programs" >PROGRAMS</a>
             <div class="menu__dot"></div>
             <div class="menu__line"></div>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#" >GALLERY</a>
+            <a class="menu__link" href="#gallery" >GALLERY</a>
             <div class="menu__dot"></div>
             <div class="menu__line"></div>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#" >REVIEWS</a>
+            <a class="menu__link" href="#reviews" >REVIEWS</a>
             <div class="menu__dot"></div>
             <div class="menu__line"></div>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#" >PARTNERS</a>
+            <a class="menu__link" href="#partners" >PARTNERS</a>
             <div class="menu__dot"></div>
             <div class="menu__line"></div>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#" >CONTACT</a>
+            <a class="menu__link" href="#contact" >CONTACT</a>
             <div class="menu__line"></div>
           </li>
         </ul>
@@ -87,8 +87,8 @@
           </div>
         </div>
 
-        <div class="texture">
-          <img class="texture--one" src="img/texture01-min.png" alt="texture">
+        <div class="texture texture--one">
+          <img class="texture__image" src="img/texture01-min.png" alt="texture">
         </div>
 
         <div class="coffee">
@@ -100,7 +100,7 @@
     </div>
 
     <!--***PROGRAMS BLOCK***-->
-    <div id="programs" class="programs container">
+    <div id="programs" class="programs">
 
       <div class="titleText">
         <div class="flex-center">
@@ -114,8 +114,8 @@
         </div>
       </div>
 
-      <div class="firstText firstText--small firstText--gray">
-        <p>We sharetheir experience and professional barista championships multiple winners</p>
+      <div class="description">
+        <p class="description__text description__text--gray description__text--small">We sharetheir experience and professional barista championships multiple winners</p>
       </div>
 
       <div class="tabs">
@@ -139,13 +139,15 @@
           <div class="planContent__2col__right">
             <h3>Beginers Course</h3>
             <div class="certificate">
+              <span class="plan-icon certificate-icon"> <img src="img/Forma1-min.png" alt=""> </span>
               <span>Certificate</span>
             </div>
             <div class="minutes">
+              <span class="plan-icon clock-icon"> <img src="img/clock-min.png" alt=""> </span>
               <span>240 minutes</span>
             </div>
             <div class="price">
-              <p>1500usd</p>
+              <p>1500<span>usd</span></p>
             </div>
             <div class="button">
               <a href="#">Registration</a>
@@ -157,7 +159,7 @@
         <div class="planContent__3col">
 
           <div class="planContent__3col_item">
-            <h5>PROVENANCE COFFEE AND BASIC CONCEPTS:</h5>
+            <p>PROVENANCE COFFEE AND BASIC CONCEPTS:</p>
             <p> Text <br>
                 Text <br>
                 Text <br>
@@ -166,7 +168,7 @@
           </div>
 
           <div class="planContent__3col_item">
-            <h5>COFFEE PRODUCTION TECHNOLOGY:</h5>
+            <p>COFFEE PRODUCTION TECHNOLOGY:</p>
             <p> Text <br>
                 Text <br>
                 Text <br>
@@ -175,7 +177,7 @@
           </div>
 
           <div class="planContent__3col_item">
-            <h5>ROASTING TECHNOLOGY BEAN. AND STAGE TYPES OF ROASTING</h5>
+            <p>ROASTING TECHNOLOGY BEAN. AND STAGE TYPES OF ROASTING</p>
             <p> Text <br>
                 Text <br>
                 Text <br>
@@ -255,26 +257,58 @@
         </div>
 
       </div>
-
     </div>
 
     <div id="gallery" class="gallery">
+
+      <div class="texture texture--two">
+        <img class="texture__image" src="img/border_2-min.png" alt="texture">
+      </div>
+
       <div class="titleText">
         <div class="flex-center">
-          <span class="icon__item icon__item--small">
-            <i class="fas fa-star"></i>
+          <span class="menuIconRight">
+            <img src="img/menuIcon-right-min.png" alt="">
           </span>
           <span class="titleText--rust titleText--medium titleText--white">GALLERY</span>
-          <span class="icon__item icon__item--small">
-            <i class="fas fa-star"></i>
+          <span class="menuIconLeft">
+            <img src="img/menuIcon-left-min.png" alt="">
           </span>
         </div>
       </div>
-      <div class="galley_slider">
-        <div>your content</div>
-        <div>your content</div>
-        <div>your content</div>
+
+      <div class="description">
+        <p class="description__text description__text--white description__text--small">We sharetheir experience and professional barista championships multiple winners</p>
+        <p class="description__text description__text--white description__text--small">We sharetheir experience and professional</p>
       </div>
+
+      <div class="gallery_slider">
+        <div> <img src="img/gallery01-min.png" alt=""> </div>
+        <div> <img src="img/gallery01-min.png" alt=""> </div>
+        <div> <img src="img/gallery01-min.png" alt=""> </div>
+        <div> <img src="img/gallery01-min.png" alt=""> </div>
+        <div> <img src="img/gallery01-min.png" alt=""> </div>
+      </div>
+
+      <div class="gallery_controls">
+        <div class="gallery_arrow gallery_prev">
+          <span></span>
+        </div>
+        <div class="paginator">
+          <span class="current">1</span>
+          <span> of </span>
+          <span class="galleryTotal"></span>
+
+        </div>
+        <div class="gallery_arrow gallery_next">
+          <span></span>
+        </div>
+      </div>
+
+      <div class="texture texture--three">
+        <img class="texture__image" src="img/border_3-min.png" alt="texture">
+      </div>
+
     </div>
 
     <div id="reviews" class="reviews">
@@ -289,7 +323,7 @@
 
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/slick/slick.min.js"></script>
