@@ -33,10 +33,7 @@ $(document).ready(function(){
     $(".planContent__2col__right .minutes span:last-child").text(plan[tipoPlan].minutes);
     $(".floatingTitle__text ").text(plan[tipoPlan].name);
     $(".price p").text(plan[tipoPlan].price);
-  })
-
-
-  console.log(plan.basic.name);
+  });
 
   $(".mobile-menu-icon").click(function(){
     $(".hider").slideToggle();
@@ -51,25 +48,34 @@ $(document).ready(function(){
     slidesToShow: 1,
     infinite: true,
     responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
+    {
+      breakpoint: 1024,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
       }
-    ]
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
   });
 
   /**Gallery counter*/

@@ -25,19 +25,29 @@ gulp.task('default', function (callback) {
 
 gulp.task('build', function (callback) {
   runSequence('clean:dist',
-    ['sass', 'useref', 'images', 'fonts'],
+    ['sass', 'useref', 'images', 'fonts', 'extjs', 'slicfolder'],
     callback
   )
-})
+});
 
 gulp.task('clean:dist', function() {
   return del.sync('dist');
-})
+});
 
 gulp.task('fonts', function() {
   return gulp.src('app/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'))
-})
+});
+
+gulp.task('extjs', function() {
+  return gulp.src('app/js/jquery*.js')
+  .pipe(gulp.dest('dist/js'))
+});
+
+gulp.task('slicfolder', function() {
+  return gulp.src('app/js/slick/**')
+  .pipe(gulp.dest('dist/js/slick'))
+});
 
 gulp.task('images', function(){
   return gulp.src('app/images/**/*.+(png|jpg|jpeg|gif|svg)')
@@ -57,7 +67,7 @@ gulp.task('browserSync', function() {
       baseDir: 'app'
     },
   })
-})
+});
 
 gulp.task('sass', function(){
   var processor = [autoprefixer({browsers : ['last 2 versions']})];
@@ -75,4 +85,4 @@ gulp.task('watch', ['browserSync' , 'sass'] , function(){
   gulp.watch('app/*.html', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
   // Other watchers
-})
+});
