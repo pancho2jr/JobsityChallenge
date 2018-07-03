@@ -7774,10 +7774,11 @@ body {
       .planContent__2col .planContent__2col__right .plan-icon img {
         width: 25px; }
     .planContent__2col .planContent__2col__right .price {
-      font-family: PlayfairBlack;
-      font-size: 2.6em; }
+      font-family: PlayfairBlack; }
+      .planContent__2col .planContent__2col__right .price span:first-child {
+        font-size: 2.6em; }
       .planContent__2col .planContent__2col__right .price span {
-        font-size: 0.5em; }
+        font-size: 1.5em; }
     .planContent__2col .planContent__2col__right .button {
       background: black;
       display: -webkit-box;
@@ -8121,19 +8122,57 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .contact .form-submit-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: end;
         -ms-flex-align: end;
-            align-items: flex-end; }
-    .contact .form-submit input {
+            align-items: flex-end;
+    width: 70%;
+    position: relative; }
+    .contact .form-submit-button:after {
+      content: "";
+      width: 65%;
+      position: absolute;
+      height: 1px;
+      background: gray;
+      top: 50%;
+      right: -45%; }
+    .contact .form-submit-button input {
       background: transparent;
       border: 1px solid gray;
-      width: 70%;
+      width: 100%;
       padding: 4px;
       font-family: Intro;
       font-size: 0.8em; }
+    .contact .form-submit-button .form-right-arrow {
+      position: absolute;
+      width: 50px;
+      height: 100%;
+      right: -44%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      .contact .form-submit-button .form-right-arrow .arrow-icon {
+        width: 15px;
+        height: 15px;
+        border-top: 1px solid gray;
+        border-right: 1px solid gray;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg); }
 
 /**Footer*/
 .footer__section {
@@ -8200,7 +8239,7 @@ body {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
-      height: 150px;
+      min-height: 150px;
       padding: 0px; }
       .footer__section .footer-table .footer-data .border-line-bottom {
         border-bottom: 1px solid white; }
@@ -8241,8 +8280,24 @@ body {
   .partners {
     padding: 65px 5% 100px 5%; }
   .gallery {
-    padding: 100px 0px 100px 0px; }
+    padding: 100px 0px 100px 0px;
+    min-height: initial; }
   .footer__section {
     padding: 65px 5% 100px 5%; }
+    .footer__section .footer-data {
+      height: 100% !important; }
+      .footer__section .footer-data div {
+        width: 100% !important;
+        border-right: none;
+        border-bottom: 1px solid white;
+        font-size: 1.5em;
+        padding: 20px 0px; }
   .contact {
-    padding: 65px 5% 100px 5%; } }
+    padding: 65px 5% 100px 5%; }
+    .contact .form-name input {
+      width: 100%; }
+    .contact .form-number input {
+      width: 100%; }
+    .contact .form-submit {
+      width: 50%;
+      margin-top: 20px; } }

@@ -494,9 +494,11 @@ body{
     }
     .price{
       font-family: PlayfairBlack;
-      font-size: 2.6em;
+      span:first-child{
+        font-size: 2.6em;
+      }
       span{
-        font-size: 0.5em;
+        font-size: 1.5em;
       }
     }
     .button {
@@ -838,17 +840,48 @@ body{
         background: transparent;
       }
     }
-    .form-submit {
+    .form-submit{
+      display: flex;
+      align-items: flex-end;
+    }
+    .form-submit-button {
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      width: 70%;
+      position: relative;
+      &:after {
+          content: "";
+          width: 65%;
+          position: absolute;
+          height: 1px;
+          background: gray;
+          top: 50%;
+          right: -45%;
+      }
       input {
         background: transparent;
         border: 1px solid gray;
-        width: 70%;
+        width: 100%;
         padding: 4px;
         font-family: Intro;
         font-size: 0.8em;
+      }
+      .form-right-arrow {
+          position: absolute;
+          width: 50px;
+          height: 100%;
+          right: -44%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          .arrow-icon {
+              width: 15px;
+              height: 15px;
+              border-top: 1px solid gray;
+              border-right: 1px solid gray;
+              transform: rotate(45deg);
+          }
       }
     }
 
@@ -917,7 +950,7 @@ body{
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
-          height: 150px;
+          min-height: 150px;
           padding: 0px;
           .border-line-bottom{
             border-bottom: 1px solid white;
@@ -969,11 +1002,36 @@ body{
   }
   .gallery{
     padding: 100px 0px 100px 0px;
+    min-height: initial;
   }
   .footer__section{
     padding: 65px 5% 100px 5%;
+    .footer-data {
+      height: 100%!important;
+      div{
+        width: 100%!important;
+        border-right: none;
+        border-bottom: 1px solid white;
+        font-size: 1.5em;
+        padding: 20px 0px;
+      }
+    }
   }
   .contact{
     padding: 65px 5% 100px 5%;
+    .form-name {
+      input{
+        width: 100%;
+      }
+    }
+    .form-number{
+      input{
+        width: 100%;
+      }
+    }
+    .form-submit{
+      width: 50%;
+      margin-top: 20px;
+    }
   }
 }
