@@ -1,0 +1,26 @@
+{
+  "name": "challenge",
+  "version": "1.0.0",
+  "description": "Jobsity Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pancho2jr/JobsityChallenge.git"
+  },
+  "author": "Francisco Cornejo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pancho2jr/JobsityChallenge/issues"
+  },
+  "homepage": "https://github.com/pancho2jr/JobsityChallenge#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.6.4",
+    "browser-sync": "^2.24.5",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
