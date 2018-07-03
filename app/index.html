@@ -6,9 +6,11 @@
 
     <title>Cofee Maker</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--build:css css/styles.min.css-->
     <link rel="stylesheet" type="text/css" href="js/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="js/slick/slick-theme.css"/>
     <link rel="stylesheet" href="css/main.css">
+    <!--endbuild-->
   </head>
   <body>
 
@@ -19,7 +21,34 @@
           <img class="logo__image" src="images/logo.png" alt="logo">
         </a>
       </div>
-      <div class="menu">
+
+      <div class="mobile-menu-container d-flex d-md-none">
+        <div class="mobile-menu-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="mobile-menu toggle-menu hider">
+          <ul>
+            <li class="menu__item">
+              <a class="menu__link" href="#programs" >PROGRAMS</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#gallery" >GALLERY</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#reviews" >REVIEWS</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#partners" >PARTNERS</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contact" >CONTACT</a>
+            </li>
+            <li class="phone__number">+38(099)66-11-730</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="menu d-none d-md-block ">
         <ul class="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="#programs" >PROGRAMS</a>
@@ -47,7 +76,7 @@
           </li>
         </ul>
       </div>
-      <div class="phone">
+      <div class="phone d-none d-md-block">
         <p class="phone__number">+38(099)66-11-730</p>
       </div>
 
@@ -91,7 +120,7 @@
           <img class="texture__image" src="images/texture01-min.png" alt="texture">
         </div>
 
-        <div class="coffee">
+        <div class="coffee home-coffee d-none d-md-block" data-parallax='{"y": 25, "x": 25, "distance": 500, "smoothness": 20}'>
           <div class="bean">
             <img class="first_bean" src="images/granola-min.png" alt="bean">
           </div>
@@ -101,6 +130,20 @@
 
     <!--***PROGRAMS BLOCK***-->
     <div id="programs" class="programs">
+
+      <div class="coffee programs-coffee-one d-none d-md-block" data-parallax='{"y": -50, "x": 25, "distance": 500, "smoothness": 20}'>
+        <div class="bean">
+          <img class="first_bean" src="images/coffePrograms01-min.png" alt="bean">
+        </div>
+      </div>
+      <div class="coffee programs-coffee-two d-none d-md-block" data-parallax='{"y": 100, "x": 25, "distance": 500, "smoothness": 20}'>
+        <div class="bean">
+          <img class="first_bean" src="images/coffePrograms02-min.png" alt="bean">
+        </div>
+      </div>
+      <div class="tazon-cafe d-none d-md-block">
+        <img src="images/wood-coffee-beans-coffee-min.png" alt="">
+      </div>
 
       <div class="titleText">
         <div class="flex-center">
@@ -120,9 +163,9 @@
 
       <div class="tabs">
         <ul>
-          <li class="tab--active"> <a href="#">BASIC</a> </li>
-          <li class="tab--inactive"> <a href="#">PREMIUM</a> </li>
-          <li class="tab--inactive"> <a href="#">PLATINIUM</a> </li>
+          <li class="tab--active"> <a class="basic" href="#">BASIC</a> </li>
+          <li class="tab--inactive"> <a class="premium" href="#">PREMIUM</a> </li>
+          <li class="tab--inactive"> <a class="platinium" href="#">PLATINIUM</a> </li>
         </ul>
       </div>
 
@@ -130,13 +173,11 @@
 
         <div class="planContent__2col">
 
-          <div class="floatingTitle">
-            <p class="floatingTitle__text">BASIC</p>
-          </div>
-          <div class="planContent__2col__left">
+
+          <div class="planContent__2col__left  col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <img src="images/planBasic-min.png" alt="">
           </div>
-          <div class="planContent__2col__right">
+          <div class="planContent__2col__right  col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <h3>Beginers Course</h3>
             <div class="certificate">
               <span class="plan-icon certificate-icon"> <img src="images/Forma1-min.png" alt=""> </span>
@@ -152,6 +193,9 @@
             <div class="button">
               <a href="#">Registration</a>
             </div>
+          </div>
+          <div class="floatingTitle d-none d-md-block" data-parallax='{"y": 0, "x": 45, "distance": 500, "smoothness": 20}'>
+            <p class="floatingTitle__text ">BASIC</p>
           </div>
 
         </div>
@@ -263,6 +307,17 @@
 
       <div class="texture texture--two">
         <img class="texture__image" src="images/border_2-min.png" alt="texture">
+      </div>
+
+      <div class="coffee gallery-coffee-one d-none d-md-block" data-parallax='{"y": 100, "x": 50, "distance": 1000, "smoothness": 20}'>
+        <div class="bean">
+          <img class="first_bean" src="images/coffeegallery01-min.png" alt="bean">
+        </div>
+      </div>
+      <div class="coffee gallery-coffee-two d-none d-md-block" data-parallax='{"y": 100, "x": -40, "distance": 1000, "smoothness": 20}'>
+        <div class="bean">
+          <img class="first_bean" src="images/coffeegallery02-min.png" alt="bean">
+        </div>
       </div>
 
       <div class="titleText">
@@ -450,21 +505,117 @@
     </div>
 
     <div id="contact" class="contact container">
+      <!-- data-parallax='{"y": 100, "x": 50, "distance": 1000, "smoothness": 20}' -->
+      <div class="coffee contact-coffee-one d-none d-md-block" data-parallax='{"y": 100, "x": -50, "distance": 1000, "smoothness": 20}'>
+        <div class="bean">
+          <img class="first_bean" src="images/coffeefqa01-min.png" alt="bean">
+        </div>
+      </div>
+
+      <div class="coffee contact-coffee-two d-none d-md-block" data-parallax='{"y": -100, "x": 50, "distance": 1000, "smoothness": 20}'>
+        <div class="bean">
+          <img class="first_bean" src="images/coffeefqa02-min.png" alt="bean">
+        </div>
+      </div>
+
+      <div class="coffee contact-coffee-three d-none d-md-block" data-parallax='{"y": 100, "x": 50, "distance": 1000, "smoothness": 20}'>
+        <div class="bean">
+          <img class="first_bean" src="images/coffeefqa03-min.png" alt="bean">
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4">
 
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-          <div class="titleText">
-            <div class="flex-center">
-              <span class="menuIconRight">
-                <img src="images/menuIconGray-right-min.png" alt="">
-              </span>
+        <div class="contact__rigth col-lg-8 col-md-8 col-sm-8 col-xs-12">
+          <div class="contact__rigth_title">
+            <div class="">
               <span class="titleText--rust titleText--medium titleText--gray">HAVE QUESTIONS?</span>
-              <span class="menuIconLeft">
-                <img src="images/menuIconGray-left-min.png" alt="">
-              </span>
+            </div>
+          </div>
+          <div class="description">
+            <p class="description__text description__text--gray description__text--small">We sharetheir experience and professional</p>
+          </div>
+          <div class="container-fluid fqa-form">
+            <div class="row">
+              <div class="fqa-form-inputs col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="form-name">
+                  <label for="">YOUR NAME</label>
+                  <input type="text" name="" value="">
+                </div>
+                <div class="form-number">
+                  <label for="">CONTACT NUMBER</label>
+                  <input type="text" name="" value="">
+                </div>
+              </div>
+              <div class="form-submit col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <input type="submit" name="" value="SEND">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="footer__section" class="footer__section">
+      <div class="texture texture--two">
+        <img class="texture__image" src="images/border_2-min.png" alt="texture">
+      </div>
+      <div class="titleText">
+        <div class="flex-center">
+          <span class="titleText--rust titleText--medium titleText--white">PROFESSIONAL SCHOOL BARISTA</span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="footer-paragraph col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            Vivamus quam elit, pellentesque nec lorem quis, congue accumsan turpis. Nulla lacinia sem ac nulla malesuada, nec tempor massa euismod. Pellentesque eros nibh, eleifend et ante quis, placerat laoreet odio. Pellentesque tincidunt sodales lacus, at iaculis arcu imperdiet id. Donec id sollicitudin mi. Cras pharetra sit amet ligula id ultrices. Aliquam ac egestas nibh. In hac habitasse platea dictumst. Aenean rhoncus consectetur gravida. Mauris eu cursus urna. Ut vitae ex at leo suscipit ornare.
+          </div>
+          <div class="footer-paragraph col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            Vivamus quam elit, pellentesque nec lorem quis, congue accumsan turpis. Nulla lacinia sem ac nulla malesuada, nec tempor massa euismod. Pellentesque eros nibh, eleifend et ante quis, placerat laoreet odio. Pellentesque tincidunt sodales lacus, at iaculis arcu imperdiet id. Donec id sollicitudin mi. Cras pharetra sit amet ligula id ultrices. Aliquam ac egestas nibh. In hac habitasse platea dictumst. Aenean rhoncus consectetur gravida. Mauris eu cursus urna. Ut vitae ex at leo suscipit ornare.
+          </div>
+          <div class="footer-table col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="footer-menu col-lg-12 col-md-12 col-sm-12 col-xs-12 d-none d-md-block">
+              <ul>
+                <li>
+                  <a href="#programs">PROGRAMS</a>
+                  <div class="menu__dot"></div>
+                </li>
+                <li>
+                  <a href="#gallery">GALLERY</a>
+                  <div class="menu__dot"></div>
+                </li>
+                <li>
+                  <a href="#reviews">TESTIMONIALS</a>
+                  <div class="menu__dot"></div>
+                </li>
+                <li>
+                  <a href="#contact">CONTACT</a>
+                  <div class="menu__dot"></div>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-data col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 d-none d-md-flex border-line-bottom">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 d-none d-md-flex border-line-bottom">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 d-none d-md-flex border-line-bottom">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 flex-column">
+                <span class="d-md-none" ><i class="fas fa-phone"></i></span> <span>+36 000 000 000</span>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 flex-column">
+                <span class="d-md-none" ><i class="fas fa-map-marker-alt"></i></span> <span>Ukraine, 61002</span>
+              </div>
+              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 flex-column">
+                <span class="d-block d-md-none" ><i class="fas fa-envelope"></i></span> <span>HELLO@COM</span>
+              </div>
             </div>
           </div>
         </div>
@@ -473,9 +624,11 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="js/jquery.easing.1.3.js" charset="utf-8"></script>
+    <script src="js/jquery.parallax-scroll.js" charset="utf-8"></script>
+    <!--build:js js/main.min.js -->
     <script type="text/javascript" src="js/slick/slick.min.js"></script>
     <script src="js/main.js" charset="utf-8"></script>
+    <!-- endbuild -->
   </body>
 </html>

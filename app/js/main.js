@@ -1,5 +1,50 @@
 $(document).ready(function(){
 
+  var plan = {
+    "basic":{
+      "name":"Basic",
+      "type":"Beginers Course",
+      "price":"1500usd",
+      "minutes":"240 minutes"
+    },
+    "premium":{
+      "name":"Premium",
+      "type":"Intermediate Course",
+      "price":"2500usd",
+      "minutes":"340 minutes"
+    },
+    "platinium":{
+      "name":"Platinium",
+      "type":"Advance Course",
+      "price":"3500usd",
+      "minutes":"440 minutes"
+    }
+  };
+
+  /**Tabs functionality*/
+  $(".tabs ul li a").click(function(e){
+    e.preventDefault();
+  });
+  $(".tabs ul li").click(function(){
+    $(".tabs ul li").removeClass("tab--active").addClass("tab--inactive");
+    $(this).addClass("tab--active");
+    var tipoPlan = $(this).find("a").attr("class");
+    $(".planContent__2col__right h3").text(plan[tipoPlan].type);
+    $(".planContent__2col__right .minutes span:last-child").text(plan[tipoPlan].minutes);
+    $(".floatingTitle__text ").text(plan[tipoPlan].name);
+    $(".price p").text(plan[tipoPlan].price);
+  })
+
+
+  console.log(plan.basic.name);
+
+  $(".mobile-menu-icon").click(function(){
+    $(".hider").slideToggle();
+  });
+  $(".toggle-menu ul li").click(function(){
+    $(".hider").slideToggle();
+  });
+
   $('.gallery_slider').slick({
     centerMode: true,
     centerPadding: '350px',
@@ -54,7 +99,32 @@ $(document).ready(function(){
     slidesToShow: 5,
     slidesToScroll: 1,
     prevArrow:"<i class='sliderArrow-prev fas fa-angle-left'></i>",
-    nextArrow:"<i class='sliderArrow-next fas fa-angle-right'></i>"
+    nextArrow:"<i class='sliderArrow-next fas fa-angle-right'></i>",
+    responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
   });
 
 
@@ -86,4 +156,23 @@ $(document).ready(function(){
       }
     }
   });
+
+  /**FQA Inputs animation*/
+  $(".form-name input").focus(function(){
+   $(".form-name label").css({"top":"-10px","transition":"1s"});
+  });
+  $(".form-name input").focusout(function(){
+  	if($(".form-name input").val() == ""){
+      $(".form-name label").css({"top":"50%","transition":"1s"});
+    }
+  });
+  $(".form-number input").focus(function(){
+   $(".form-number label").css({"top":"-10px","transition":"1s"});
+  });
+  $(".form-number input").focusout(function(){
+  	if($(".form-number input").val() == ""){
+      $(".form-number label").css({"top":"50%","transition":"1s"});
+    }
+  });
+
 });
