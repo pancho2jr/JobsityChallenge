@@ -7860,7 +7860,7 @@ body {
   margin: 10px 0px; }
 
 .firstText--small, .description__text--small {
-  font-size: 0.5em; }
+  font-size: 0.7em; }
 
 .firstText--gray, .description__text--gray {
   color: #020202; }
@@ -8210,10 +8210,113 @@ body {
 
 /**Testimonial*/
 .reviews {
-  padding: 200px 0px 100px 0px;
-  background-image: url(../images/programsBackground-min.png);
+  padding: 60px 20% 100px 20%;
+  background-image: url("../images/programsBackground-min.png");
   background-size: cover; }
+  .reviews .reviews__name p {
+    font-family: Intro;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8em; }
+  .reviews .reviews__review p {
+    font-family: Minion;
+    font-size: 0.8em;
+    text-align: center; }
+  .reviews .reviews_slider .slick-track .slick-slide .reviews__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative; }
+    .reviews .reviews_slider .slick-track .slick-slide .reviews__image .reviews__image__container {
+      position: relative; }
+      .reviews .reviews_slider .slick-track .slick-slide .reviews__image .reviews__image__container img {
+        max-width: 150px;
+        margin: auto;
+        border-radius: 100px; }
+      .reviews .reviews_slider .slick-track .slick-slide .reviews__image .reviews__image__container .review_social {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        color: white;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: 0.8em;
+        border-radius: 100px; }
+      .reviews .reviews_slider .slick-track .slick-slide .reviews__image .reviews__image__container .review_social_facebook {
+        background: #4267b2; }
+  .reviews .slick-dots li button:before {
+    font-size: 10px;
+    color: #000000;
+    opacity: 1; }
+  .reviews .slick-dots .slick-active button:before {
+    color: #eab96a; }
 
 /**Our partners*/
 .partners {
-  padding: 200px 0px 100px 0px; }
+  padding: 60px 20% 100px 20%;
+  background-image: url("../images/programsBackground-min.png");
+  position: relative; }
+  .partners .titleText {
+    padding-bottom: 40px; }
+    .partners .titleText .titleText--rust {
+      position: relative; }
+      .partners .titleText .titleText--rust:before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background: #020202;
+        bottom: -20px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); }
+  .partners .partners_slider .slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .partners .partners_slider .slick-track .slick-slide {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .partners .partners_slider .slick-track .slick-slide img {
+        max-width: 60px;
+        margin: auto; }
+  .partners .sliderArrow-prev, .partners .sliderArrow-next {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .partners .sliderArrow-prev {
+    left: -25px; }
+  .partners .sliderArrow-next {
+    right: -25px; }
+
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(108, 117, 125, 0.5);
+  width: 100%;
+  height: 100%;
+  z-index: 0; }

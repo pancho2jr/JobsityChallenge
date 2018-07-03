@@ -42,57 +42,19 @@ $(document).ready(function(){
   });
 
   $('.reviews_slider').slick({
-    centerMode: true,
-    centerPadding: '350px',
-    slidesToShow: 1,
+    dots: true,
     infinite: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
   });
 
   $('.partners_slider').slick({
-    centerMode: true,
-    centerPadding: '350px',
-    slidesToShow: 1,
     infinite: true,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }
-    ]
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    prevArrow:"<i class='sliderArrow-prev fas fa-angle-left'></i>",
+    nextArrow:"<i class='sliderArrow-next fas fa-angle-right'></i>"
   });
 
 
